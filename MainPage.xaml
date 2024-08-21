@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Module01Exercise01"
+             x:Class="Module01Exercise01.MainPage"
+             Background="{DynamicResource LocalBackgroundColor}">
+
+    <ContentPage.Resources>
+        <x:String x:Key="Staticgreetings">Welcome!</x:String>
+        <Color x:Key="LocalBackgroundColor">#1f1f1f</Color>
+        <Color x:Key="LocalTextColor">Black</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="50,0"
+            Spacing="25">
+
+            <Label x:Name="StaticResourceLabel"
+                   Text="{StaticResource Staticgreetings}"
+                   HorizontalOptions="Center"
+                   FontSize="Header"
+                   TextColor="{DynamicResource DynamicText}"/>
+
+            <Label Text="{local:CurrentDateExtension}" HorizontalOptions="Center" TextColor="{DynamicResource DynamicColor}"/>
+
+            <Entry Placeholder="Name"
+                   x:Name="TextEntry" BackgroundColor="{DynamicResource DynamicColor}" PlaceholderColor="{DynamicResource DynamicText1}"/>
+            <Entry Placeholder="Email"
+                   x:Name="EmailEntry" BackgroundColor="{DynamicResource DynamicColor}" PlaceholderColor="{DynamicResource DynamicText1}"/>
+            <DatePicker x:Name="DatePicker" Date="{Binding SelectedDate, Mode=TwoWay}" BackgroundColor="{DynamicResource DynamicColor}" TextColor="{DynamicResource DynamicText1}"/>
+            <Editor Placeholder="Biography" x:Name="Bio" BackgroundColor="{DynamicResource DynamicColor}" PlaceholderColor="{DynamicResource DynamicText1}"/>
+            <Button Text="Save Changes" Clicked="Button_Clicked"/>
+            <Button Text="Light Mode" Clicked="Button_Clicked_1"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

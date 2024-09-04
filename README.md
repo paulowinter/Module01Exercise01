@@ -4,9 +4,9 @@
 
 ### Color Changed (dark mode to light mode)
 ![Emulator](ss/Default.png)
-![Emulator](ss/Colorchanged.png)
+![Emulator](ss/ColorChanged.png)
 
 
 ### Entries & Profile Updated
 ![Emulator](ss/Entries.png)
-![Emulator](ss/ProfileUpdated.png)
+![Emulator](ss/ProfileUpdate.png)
